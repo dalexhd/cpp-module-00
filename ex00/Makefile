@@ -34,21 +34,15 @@ NORM_COLOR_ERR		=	$(shell printf "\033[0;41m")
 BG_X				=	$(shell printf "\033[0;39m")
 TAB					=	$(shell printf "\t")
 
-# Objects directory
-$(OBJ_DIR):
-				@echo ${CUT}[${Y}$(NAME)]${X} ${B}Creating: ${R}$(OBJ_DIR)${X}
-				@mkdir -p $(OBJ_DIR)
 
-
-$(NAME):		$(OBJ_DIR) $(OBJS)
-				$(CC) $(FLAGS) -o $(NAME) $(OBJ_DIR)$(OBJS)
+$(NAME):		$(OBJS)
+				$(CC) $(FLAGS) -o $(NAME) $(OBJS)
 
 clean:
 				$(RM) $(OBJS)
 
 fclean:			## Remove all objects and executables.
 				$(RM) $(OUTPUT)
-				$(RM) $(OBJ_DIR)
 				$(RM) $(NAME)
 				@echo ${CUT}[${Y}$(OUTPUT)]${X} [Garbage collector:${Y} ${OUTPUT} $(NAME) *.o${X}][${G}OK!${X}]
 

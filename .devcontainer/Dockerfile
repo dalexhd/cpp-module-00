@@ -10,7 +10,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     build-essential \
     python3-pip \
     valgrind \
-    gdb
+    gdb \
+    clang
 
 RUN python3 -m pip install --upgrade pip setuptools && python3 -m pip install norminette
 
