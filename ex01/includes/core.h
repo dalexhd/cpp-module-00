@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   core.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 18:40:04 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/14 10:45:44 by aborboll         ###   ########.fr       */
+/*   Created: 2021/10/14 10:59:18 by aborboll          #+#    #+#             */
+/*   Updated: 2021/10/14 11:07:00 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Incluimos las librerias esenciales.
+*/
 #include <iostream>
 #include <string.h>
 
-int main(int argc, char **argv)
+/*
+** Incluimos las constantes.
+*/
+#include "constants.h"
+
+/*
+** Incluimos la parte interna.
+*/
+#include "internal.h"
+
+/*
+** Incluimos la parte de colores.
+*/
+#include "color.h"
+
+namespace N
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
+	class core
 	{
-		for (int u = 1; u < argc; ++u)
-		{
-			std::string str(argv[u]);
-			for (size_t i = 0; i < str.length(); i++)
-				std::cout << (char)std::toupper(str[i]);
-			if (u + 1 < argc)
-				std::cout << " ";
-		}
-		std::cout << "\n";
-	}
-	return (0);
+		public:
+			void test();
+	};
 }

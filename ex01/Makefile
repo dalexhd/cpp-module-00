@@ -1,5 +1,5 @@
 #-fsanitize=address
-OUTPUT				=	megaphone
+OUTPUT				=	agenda
 
 CC					=	@clang++
 SH					=	@bash
@@ -9,6 +9,7 @@ LEAKS_FLAGS			=	--tool=memcheck --leak-check=full --leak-resolution=high --show-
 
 HEADER_DIR			=	includes/
 OBJ_DIR				=	obj/
+SRC_DIR				=	srcs/
 RESULT				=	$(shell cat output.txt)
 AUTHOR				=	$(shell cat ../author)
 LAST_COMMIT_DATE	=	$(shell git log -1 --date=format:"%m/%d/%Y" --format="%ad   [%cr]")
@@ -22,7 +23,7 @@ COUNTER				= 	0
 COLUMNS				=	$(shell stty size | cut -d" " -f2)
 
 # Mandatory part
-SRCS				=	megaphone.cpp
+SRCS				=	test.cpp
 SOURCES				=	$(SRCS)
 
 # Mandatory Objects
@@ -77,13 +78,13 @@ $(OBJ_DIR):
 # Normal objects
 $(OUTPUT): $(OBJ_DIR) $(OBJS)
 			@echo
-			$(CC) $(OBJS) -I $(HEADER_DIR) $(FLAGS) -o $(OUTPUT)
+			$(CC) main.cpp $(OBJS) -I $(HEADER_DIR) $(FLAGS) -o $(OUTPUT)
 			@echo ${B}[-------------------------------------]${X}
 			@echo ${B}[------------ ${BOLD}OK${X}${B} - ${BOLD}$(OUTPUT)${X}${B} -----------]${X}
 			@echo ${B}[--- 🍴 Let\'s feed philosophers 🍴 ---]${X}
 			@echo ${B}[-------------------------------------]${X}
 
-$(OBJ_DIR)%.o: %.cpp
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 			$(eval COUNTER=$(shell echo $$(($(COUNTER)+1))))
 			$(eval SIZE=$(shell wc -c < $<))
 			$(eval STR=$(shell echo ${CUT}[${Y}$(OUTPUT)]${X} ${B}Compiling: ${X}$(SIZE) Bytes${R} $<${X}))
