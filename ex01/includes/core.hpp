@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   core.h                                             :+:      :+:    :+:   */
+/*   core.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:59:18 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/14 11:07:00 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/14 11:49:36 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,20 @@
 /*
 ** Incluimos las constantes.
 */
-#include "constants.h"
+#include "constants.hpp"
 
 /*
 ** Incluimos la parte interna.
 */
-#include "internal.h"
+#include "internal.hpp"
 
 /*
 ** Incluimos la parte de colores.
 */
-#include "color.h"
+#include "color.hpp"
 
-namespace N
+class core
 {
-	class core
-	{
-		public:
-			void test();
-	};
-}
+	public:
+		void test();
+};
