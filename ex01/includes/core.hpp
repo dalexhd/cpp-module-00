@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:59:18 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/14 11:49:36 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/14 12:07:22 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@
 class core
 {
 	public:
-		void test();
+		void reader();
 };

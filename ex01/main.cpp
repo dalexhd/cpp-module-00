@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:52:25 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/14 11:48:59 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/14 11:58:20 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ int main(int argc, char **argv)
 	(void)argc;
 	(void)argv;
 
-	core.test();
+	core.reader();
 	return (0);
 }
