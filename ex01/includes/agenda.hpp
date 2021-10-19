@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reader.cpp                                         :+:      :+:    :+:   */
+/*   agenda.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/14 11:03:17 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/19 22:33:08 by aborboll         ###   ########.fr       */
+/*   Created: 2021/10/14 10:59:18 by aborboll          #+#    #+#             */
+/*   Updated: 2021/10/19 22:23:17 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/agenda.hpp"
+/*
+** Incluimos las librerias esenciales.
+*/
+#include <iostream>
+#include <string.h>
 
-static	void	add()
+/*
+** Incluimos las constantes.
+*/
+#include "constants.hpp"
+
+/*
+** Incluimos la parte interna.
+*/
+#include "internal.hpp"
+
+/*
+** Incluimos la parte de colores.
+*/
+#include "color.hpp"
+
+
+/*
+** Incluimos la clase del contacto
+*/
+#include "contact.hpp"
+
+class agenda
 {
-	std::cout << "Add\n";
-}
-
-static	void	search()
-{
-	std::cout << "Search\n";
-}
-
-void	agenda::reader()
-{
-	std::string res;
-
-	while (1)
-	{
-		std::cout << "> ";
-		std::cin >> res;
-		if (res.compare("ADD") == 0)
-			add();
-		else if (res.compare("SEARCH") == 0)
-			search();
-		else if (res.compare("EXIT") == 0)
-			break ;
-	}
-}
+	private:
+		contact	contact[8];
+	public:
+		void reader();
+};

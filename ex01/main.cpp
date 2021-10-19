@@ -6,18 +6,18 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:52:25 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/14 11:58:20 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/19 22:34:14 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/core.hpp"
+#include "includes/agenda.hpp"
 
 int main(int argc, char **argv)
 {
-	core core;
+	agenda agend;
 	(void)argc;
 	(void)argv;
 
-	core.reader();
+	agend.reader();
 	return (0);
 }
