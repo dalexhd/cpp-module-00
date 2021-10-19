@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 14:21:17 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/19 22:32:52 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/19 22:36:19 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,6 @@ class contact
         char *name;
         char *surname;
         char *nickname;
+        char *number;
+        char *secret;
 };
