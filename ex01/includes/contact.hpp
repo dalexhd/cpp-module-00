@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 14:21:17 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/20 09:46:54 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/25 18:49:38 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Contact
         private:
 	public:
         t_llong         index;
-        std::string     name;
-        std::string     surname;
+        std::string     first_name;
+        std::string     last_name;
         std::string     nickname;
         std::string     number;
         std::string     secret;

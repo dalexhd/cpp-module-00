@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   agenda.hpp                                         :+:      :+:    :+:   */
+/*   Agenda.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:59:18 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/20 09:46:01 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/25 19:19:21 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,10 @@
 class Agenda
 {
 	private:
-		Contact	contact[8];
+		Contact	contacts[8];
 	public:
-		void reader();
+		int		number_of_contacts;
+		void	reader();
+		void	add();
+		void	search();
 };
