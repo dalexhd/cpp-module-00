@@ -6,20 +6,27 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 14:21:17 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/19 22:36:19 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/20 09:46:54 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "./types.hpp"
 
-class contact
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
+class Contact
 {
         private:
 	public:
-        t_llong index;
-        char *name;
-        char *surname;
-        char *nickname;
-        char *number;
-        char *secret;
+        t_llong         index;
+        std::string     name;
+        std::string     surname;
+        std::string     nickname;
+        std::string     number;
+        std::string     secret;
 };
+
+#endif
+

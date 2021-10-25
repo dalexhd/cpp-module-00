@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:59:18 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/19 22:23:17 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/20 09:46:01 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@
 /*
 ** Incluimos la clase del contacto
 */
-#include "contact.hpp"
+#include "Contact.hpp"
 
-class agenda
+class Agenda
 {
 	private:
-		contact	contact[8];
+		Contact	contact[8];
 	public:
 		void reader();
 };

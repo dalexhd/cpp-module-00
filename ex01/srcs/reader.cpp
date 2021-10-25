@@ -6,11 +6,11 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 11:03:17 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/19 22:33:08 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/20 09:49:27 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/agenda.hpp"
+#include "../includes/Agenda.hpp"
 
 static	void	add()
 {
@@ -22,7 +22,7 @@ static	void	search()
 	std::cout << "Search\n";
 }
 
-void	agenda::reader()
+void	Agenda::reader()
 {
 	std::string res;
 
