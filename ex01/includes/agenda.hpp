@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:59:18 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/25 19:19:21 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/10/29 15:45:22 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,35 +15,27 @@
 */
 #include <iostream>
 #include <string.h>
-
-/*
-** Incluimos las constantes.
-*/
-#include "constants.hpp"
-
-/*
-** Incluimos la parte interna.
-*/
-#include "internal.hpp"
-
-/*
-** Incluimos la parte de colores.
-*/
-#include "color.hpp"
-
+#include <cmath>
 
 /*
 ** Incluimos la clase del contacto
 */
 #include "Contact.hpp"
 
+#ifndef MAX_CONTACTS
+	#define MAX_CONTACTS 8
+#endif
+
 class Agenda
 {
 	private:
-		Contact	contacts[8];
+		Contact	contacts[MAX_CONTACTS];
 	public:
 		int		number_of_contacts;
-		void	reader();
+		void	launch();
 		void	add();
 		void	search();
 };
+
+std::string	ask(std::string key);
+std::string	truncate(std::string str, size_t width);

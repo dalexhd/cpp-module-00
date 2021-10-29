@@ -7,7 +7,7 @@ RM					=	@/bin/rm -rf
 FLAGS				=	-Wextra -Wall -Werror -g1 -fsanitize=address
 LEAKS_FLAGS			=	--tool=memcheck --leak-check=full --leak-resolution=high --show-leak-kinds=all --track-origins=yes
 
-HEADER_DIR			=	includes/
+HEADER_DIR			=	.
 OBJ_DIR				=	obj/
 RESULT				=	$(shell cat output.txt)
 AUTHOR				=	$(shell cat ../author)
@@ -22,7 +22,7 @@ COUNTER				= 	0
 COLUMNS				=	$(shell stty size | cut -d" " -f2)
 
 # Mandatory part
-SRCS				=	Account.cpp
+SRCS				=	tests.cpp Account.cpp
 SOURCES				=	$(SRCS)
 
 # Mandatory Objects

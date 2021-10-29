@@ -23,7 +23,7 @@ COUNTER				= 	0
 COLUMNS				=	$(shell stty size | cut -d" " -f2)
 
 # Mandatory part
-SRCS				=	reader.cpp
+SRCS				=	agenda.cpp utils.cpp
 SOURCES				=	$(SRCS)
 
 # Mandatory Objects
