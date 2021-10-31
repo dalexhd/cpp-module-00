@@ -80,8 +80,8 @@ $(OUTPUT): $(OBJ_DIR) $(OBJS)
 			@echo
 			$(CC) main.cpp $(OBJS) -I $(HEADER_DIR) $(FLAGS) -o $(OUTPUT)
 			@echo ${B}[-------------------------------------]${X}
-			@echo ${B}[------------ ${BOLD}OK${X}${B} - ${BOLD}$(OUTPUT)${X}${B} -----------]${X}
-			@echo ${B}[--- 🍴 Let\'s feed philosophers 🍴 ---]${X}
+			@echo ${B}[------------- ${BOLD}OK${X}${B} - ${BOLD}$(OUTPUT)${X}${B} -----------]${X}
+			@echo ${B}[------ 📅 Let\'s exec agenda   📅 ------]${X}
 			@echo ${B}[-------------------------------------]${X}
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp

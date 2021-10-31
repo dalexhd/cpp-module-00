@@ -80,7 +80,7 @@ $(OUTPUT): $(OBJ_DIR) $(OBJS)
 			$(CC) $(OBJS) -I $(HEADER_DIR) $(FLAGS) -o $(OUTPUT)
 			@echo ${B}[-------------------------------------]${X}
 			@echo ${B}[------------ ${BOLD}OK${X}${B} - ${BOLD}$(OUTPUT)${X}${B} -----------]${X}
-			@echo ${B}[--- 🍴 Let\'s feed philosophers 🍴 ---]${X}
+			@echo ${B}[------- 🤖 Let\'s feed noob   🤖 -------]${X}
 			@echo ${B}[-------------------------------------]${X}
 
 $(OBJ_DIR)%.o: %.cpp
