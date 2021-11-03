@@ -6,12 +6,13 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 18:40:04 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/31 17:50:59 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/11/03 18:20:55 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string.h>
+#include <ctime>
 #include "Account.hpp"
 
 int Account::_nbAccounts = 0;

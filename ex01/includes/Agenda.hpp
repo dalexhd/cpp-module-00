@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:59:18 by aborboll          #+#    #+#             */
-/*   Updated: 2021/10/29 15:45:22 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:09:42 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,12 @@ class Agenda
 	public:
 		int		number_of_contacts;
 		void	launch();
+		bool	display_contacts();
 		void	add();
 		void	search();
+		int		getOldestEntry(void);
 };
 
 std::string	ask(std::string key);
 std::string	truncate(std::string str, size_t width);
+std::time_t	timestamp(void);
