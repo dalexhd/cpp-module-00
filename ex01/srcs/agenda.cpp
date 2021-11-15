@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 11:03:17 by aborboll          #+#    #+#             */
-/*   Updated: 2021/11/03 19:08:16 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/11/15 19:39:07 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ bool	Agenda::display_contacts()
 	return (true);
 }
 
-
 void	Agenda::search()
 {
 	Contact 	contact;
@@ -117,11 +116,8 @@ void	Agenda::launch()
 	std::string res;
 
 	this->number_of_contacts = 0;
-	while (1)
+	while (std::cout << "> " && std::getline(std::cin, res))
 	{
-		//FIXME:: Here duplicates the > > simbol if string words are larger than 1 word.
-		std::cout << "> ";
-		std::cin >> res;
 		if (res.compare("ADD") == 0)
 			Agenda::add();
 		else if (res.compare("SEARCH") == 0)
